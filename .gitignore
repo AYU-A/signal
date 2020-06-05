@@ -1,0 +1,6 @@
+
+cmd/evt.deploy.all.sh
+cmd/evt.deploy.call.room.sh
+cmd/evt.deploy.schedule.call.sh
+cmd/evt.env.sh
+cmd/evt.rundev.sh
