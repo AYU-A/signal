@@ -1,4 +1,5 @@
 #!/bin/bash
+export GOOGLE_APPLICATION_CREDENTIALS=../../hotel-signal-305abb7fcefa.json
 
 # Google Cloud Postgres
 export SIGNAL_PG_PROTO=unix
@@ -7,7 +8,7 @@ export SIGNAL_PG_DB=signals
 export SIGNAL_PG_USER=signals
 export SIGNAL_PG_PASSWORD=OqGlOvyNGmNmraas
 
-export SIGNAL_GC_PROJECT=hotel-signals
+export SIGNAL_GC_PROJECT=hotel-signal
 export SIGNAL_GC_PROJECT_LOCATION=europe-west3
 export SIGNAL_CALL_ROOM_ENDPOINT=https://$SIGNAL_GC_PROJECT_LOCATION-$SIGNAL_GC_PROJECT.cloudfunctions.net/CallRoom
 export SIGNAL_SCHEDULER_LOCATION=projects/$SIGNAL_GC_PROJECT/locations/$SIGNAL_GC_PROJECT_LOCATION

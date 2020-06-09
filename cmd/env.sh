@@ -1,5 +1,5 @@
 #!/bin/bash
-export GOOGLE_APPLICATION_CREDENTIALS=../../hotel-alarm-2240fe8d3432.json
+export GOOGLE_APPLICATION_CREDENTIALS=../../hotel-signal-305abb7fcefa.json
 
 # Local Postgres
 export SIGNAL_PG_PROTO=tcp

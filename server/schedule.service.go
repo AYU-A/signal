@@ -41,7 +41,7 @@ func (s *Server) ScheduleCall(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		if err := validateCallTime(room.CallTime); err != nil {
-			s.error(w, r, fmt.Errorf("Call time (%s) has incorrect format (must be xx:yy) for room number %d", room.CallTime, room.RoomNumber), http.StatusBadRequest)
+			s.error(w, r, fmt.Errorf("Call time (%s) has incorrect format (must be hh:mm) for room number %d", room.CallTime, room.RoomNumber), http.StatusBadRequest)
 			return
 		}
 	}
