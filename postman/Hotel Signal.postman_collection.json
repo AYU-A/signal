@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "4a9d8b3c-85c1-48bc-ad19-699cafcd3465",
+		"name": "Hotel Signal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/callroom?call_time=08:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/callroom?call_time=08:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"callroom"
+					],
+					"query": [
+						{
+							"key": "call_time",
+							"value": "08:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://europe-west3-hotel-signal.cloudfunctions.net/CallRoom?call_time=08:00",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://europe-west3-hotel-signal.cloudfunctions.net/CallRoom?call_time=08:00",
+					"protocol": "https",
+					"host": [
+						"europe-west3-hotel-signal",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"CallRoom"
+					],
+					"query": [
+						{
+							"key": "call_time",
+							"value": "08:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"firstname\": \"Noah\",\n        \"lastname\": \"Smith\",\n        \"retry_count\": 2,\n        \"call_time\": \"08:00\",\n        \"room_number\": 4\n    },\n    {\n        \"firstname\": \"Emma\",\n        \"lastname\": \"Johnson\",\n        \"retry_count\": 1,\n        \"call_time\": \"07:50\",\n        \"room_number\": 7\n    },\n    {\n        \"firstname\": \"Olivia\",\n        \"lastname\": \"Williams\",\n        \"retry_count\": 1,\n        \"call_time\": \"08:00\",\n        \"room_number\": 10\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/schedule"
+			},
+			"response": []
+		},
+		{
+			"name": "https://europe-west3-hotel-signal.cloudfunctions.net/ScheduleCall",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"firstname\": \"Noah\",\n        \"lastname\": \"Smith\",\n        \"retry_count\": 2,\n        \"call_time\": \"08:00\",\n        \"room_number\": 4\n    },\n    {\n        \"firstname\": \"Emma\",\n        \"lastname\": \"Johnson\",\n        \"retry_count\": 1,\n        \"call_time\": \"07:50\",\n        \"room_number\": 7\n    },\n    {\n        \"firstname\": \"Olivia\",\n        \"lastname\": \"Williams\",\n        \"retry_count\": 1,\n        \"call_time\": \"08:00\",\n        \"room_number\": 10\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://europe-west3-hotel-signal.cloudfunctions.net/ScheduleCall"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
